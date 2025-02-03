@@ -7,6 +7,6 @@ const UserFeedbackSchema = new mongoose.Schema({
     rating: { type: Number, min: 1, max: 5, required: true },
     feedbackType: { type: String, enum: ['positive', 'negative', 'suggestion'], required: true },
     createdAt: { type: Date, default: Date.now }
-}, { collection: "userfeedbacks" });  // Ensure it's saved in the "userfeedbacks" collection
+}, { collection: "userfeedbacks" });
 
 module.exports = mongoose.model("UserFeedback", UserFeedbackSchema);
