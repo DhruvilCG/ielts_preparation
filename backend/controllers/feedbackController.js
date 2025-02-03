@@ -4,6 +4,9 @@ const submitFeedback = async (req, res) => {
     try {
         const { name, email, message, rating, feedbackType } = req.body;
 
+        // Log incoming feedback data for debugging
+        console.log("Received feedback:", req.body);
+
         // Input Validation
         if (!name || !email || !message || !rating || !feedbackType) {
             return res.status(400).json({ error: "All fields are required" });
@@ -14,7 +17,10 @@ const submitFeedback = async (req, res) => {
 
         // Saving feedback to MongoDB
         await newFeedback.save();
-        return res.status(201).json({ message: "Feedback submitted successfully!" });
+
+        console.log("Feedback saved successfully");
+
+        res.status(201).json({ message: "Feedback submitted successfully!" });
     } catch (error) {
         console.error("Error saving feedback:", error); // More detailed logging
         return res.status(500).json({ error: `Failed to save feedback. Error: ${error.message}` }); // Return error message to client

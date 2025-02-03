@@ -26,7 +26,8 @@ async function connectToDB() {
 const getReading = async (req, res) => {
     try {
         await connectToDB();
-        const randomNum = Math.floor(Math.random() * 2) + 1;
+        const totalEntries = await Reading.countDocuments();
+        const randomNum = Math.floor(Math.random() * totalEntries) + 1;
         const randomReading = await Reading.findOne({ num: randomNum });
 
         if (randomReading) {
@@ -42,7 +43,8 @@ const getReading = async (req, res) => {
 const getListening = async (req, res) => {
     try {
         await connectToDB();
-        const randomNum = Math.floor(Math.random() * 1) + 1;
+        const totalEntries = await Listening.countDocuments();
+        const randomNum = Math.floor(Math.random() * totalEntries) + 1;
         const randomListening = await Listening.findOne({ num: randomNum });
 
         if (randomListening) {
@@ -58,7 +60,8 @@ const getListening = async (req, res) => {
 const getWriting = async (req, res) => {
     try {
         await connectToDB();
-        const randomNum = Math.floor(Math.random() * 10) + 1;
+        const totalEntries = await Writing.countDocuments();
+        const randomNum = Math.floor(Math.random() * totalEntries) + 1;
         const randomWriting = await Writing.findOne({ num: randomNum });
 
         if (randomWriting) {
