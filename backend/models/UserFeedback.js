@@ -10,3 +10,4 @@ const UserFeedbackSchema = new mongoose.Schema({
 }, { collection: "userfeedbacks" });
 
 module.exports = mongoose.model("UserFeedback", UserFeedbackSchema);
+
