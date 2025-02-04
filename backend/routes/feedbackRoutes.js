@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const { submitFeedback } = require("../controllers/feedbackController");
+const { submitFeedback, updateFeedback } = require("../controllers/feedbackController");
 
-// POST route for submitting feedback
-router.post("/feedback", (req, res, next) => {
-    console.log("Received request to submit feedback");
-    next();
-}, submitFeedback);
+// POST request for submitting feedback
+router.post("/feedback", submitFeedback);
+
+// PUT request for updating feedback
+router.put("/feedback/:id", updateFeedback);
 
 module.exports = router;
