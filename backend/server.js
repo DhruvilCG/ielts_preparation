@@ -5,34 +5,32 @@ require("dotenv").config(); // Load environment variables from .env file
 
 const app = express();
 
+// MongoDB Connection
+mongoose.connect("mongodb+srv://dhruvilpatelm:dhruvil2207@cluster0.a26w3.mongodb.net/IELTS?retryWrites=true&w=majority", {})
+  .then(() => console.log("✅ MongoDB Connected"))
+  .catch((err) => console.log("❌ Error:", err));
+
 // Middleware
 app.use(cors());
 app.use(express.json()); // Allow JSON data parsing
 
-// MongoDB Connection (Use environment variable)
-mongoose.connect(process.env.MONGO_URI || "mongodb+srv://dhruvilpatelm:dhruvil2207@cluster0.a26w3.mongodb.net/IELTS?retryWrites=true&w=majority", {})
-  .then(() => console.log("✅ MongoDB Connected"))
-  .catch((err) => console.log("❌ Error:", err));
-
-
 // Import Routes
-const feedbackRoutes = require("./routes/feedbackRoutes");
-const userRoutes = require("./routes/userRoutes");
-const ieltsRoutes = require("./routes/ieltsRoutes"); // Add IELTS API Routes
+const answersRoutes = require("./routes/answersRoutes");
+const ieltsRoutes = require("./routes/ieltsRoutes");
 
 // Use Routes
-app.use("/api", feedbackRoutes);  // Feedback routes
-app.use("/api", userRoutes);      // User routes
-app.use("/api/ielts", ieltsRoutes); // IELTS-related routes
+app.use("/api", answersRoutes);  // Handles answer-related routes
+app.use("/api", ieltsRoutes);    // Handles IELTS-related routes (e.g., reading, writing)
 
-// Default Route (Health Check)
+// Default Route
 app.get("/", (req, res) => {
-    res.send("🎉 IELTS API is running!");
+  res.send("🎉 IELTS API is running!");
 });
 
 // Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
 
 
 
