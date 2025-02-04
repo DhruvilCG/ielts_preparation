@@ -5,7 +5,7 @@ const answerSchema = new mongoose.Schema({
   module: { type: String, required: true },
   questionId: { type: String, required: true },
   answer: { type: String, required: true },
-  createdAt: { type: Date, default: Date.now }
+  submittedAt: { type: Date, default: Date.now }
 });
 
 const Answer = mongoose.model("Answer", answerSchema);

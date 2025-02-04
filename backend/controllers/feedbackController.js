@@ -13,8 +13,8 @@ const submitFeedback = async (req, res) => {
         await newFeedback.save();
         res.status(201).json({ message: "Feedback submitted successfully!" });
     } catch (error) {
-        console.error("Error saving feedback:", error);
-        res.status(500).json({ error: "Failed to save feedback. Please try again." });
+        console.error("Error saving feedback:", error); // More detailed logging
+        return res.status(500).json({ error: `Failed to save feedback. Error: ${error.message}` }); // Return error message to client
     }
 };
 
