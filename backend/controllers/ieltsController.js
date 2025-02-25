@@ -1,11 +1,10 @@
-// controllers/ieltsController.js
 const { MongoClient } = require("mongodb");
 require("dotenv").config();
 
-const uri = process.env.MONGO_URI || "mongodb+srv://dhruvilpatelm:dhruvil2207@cluster0.4xcyi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri = "mongodb+srv://dhruvilpatelm:dhruvil2207@cluster0.4xcyi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 const dbName = "IELTS";
 
-let db, Reading, Listening, Writing, Speaking;
+let db, Reading, Listening, Writing, Speaking, Answers;  // Add Answers collection
 
 // Function to connect to MongoDB
 async function connectToDB() {
@@ -20,6 +19,7 @@ async function connectToDB() {
             Listening = db.collection("IELTS listening");
             Writing = db.collection("IELTS writing");
             Speaking = db.collection("IELTS speaking");
+            Answers = db.collection("user_answers");  // New collection for user answers
         } catch (err) {
             console.error("❌ MongoDB Connection Error:", err);
             process.exit(1);  // Terminate the app if DB connection fails
@@ -99,5 +99,36 @@ const addReading = async (req, res) => {
     }
 };
 
+// Submit Answer (User Feedback)
+const submitAnswer = async (req, res) => {
+    try {
+        const { questionId, answer, userId } = req.body;  // Assuming questionId, answer, and userId are provided by the user
+
+        // Validate the data
+        if (!questionId || !answer || !userId) {
+            return res.status(400).json({ error: "Missing required fields: questionId, answer, and userId" });
+        }
+
+        await connectToDB();  // Ensure DB is connected
+
+        // Insert the answer data into the `user_answers` collection
+        const newAnswer = await Answers.insertOne({ questionId, answer, userId, submittedAt: new Date() });
+
+        res.status(201).json({
+            message: "Answer submitted successfully",
+            data: newAnswer
+        });
+    } catch (err) {
+        res.status(500).json({ error: "Error submitting answer", details: err.message });
+    }
+};
+
 // Export controllers
-module.exports = { getReading, getListening, getWriting, getSpeaking, addReading };
+module.exports = { 
+    getReading, 
+    getListening, 
+    getWriting, 
+    getSpeaking, 
+    addReading, 
+    submitAnswer  // Export the submitAnswer function
+};

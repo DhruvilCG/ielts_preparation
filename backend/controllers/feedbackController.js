@@ -1,35 +1,36 @@
-const UserFeedback = require("../models/userFeedback");
+const UserFeedback = require('../models/UserFeedback'); // Adjust path as needed
 
+// Function to handle user feedback submission
 const submitFeedback = async (req, res) => {
-    console.log("Received feedback:", req.body); // Log the incoming feedback data
+    console.log("Received feedback:", req.body); // Log to check incoming data
+
     try {
+        // Destructuring required fields from the request body
         const { name, email, message, rating, feedbackType } = req.body;
 
+        // Input validation: Check if any field is missing
         if (!name || !email || !message || !rating || !feedbackType) {
             return res.status(400).json({ error: "All fields are required" });
         }
 
-        const newFeedback = new UserFeedback({ name, email, message, rating, feedbackType });
+        // Creating a new feedback document
+        const newFeedback = new UserFeedback({
+            name,
+            email,
+            message,
+            rating,
+            feedbackType
+        });
+
+        // Saving the feedback document to the database
         await newFeedback.save();
+
+        // Responding back with success message
         res.status(201).json({ message: "Feedback submitted successfully!" });
     } catch (error) {
-        console.error("Error saving feedback:", error); // More detailed logging
-        return res.status(500).json({ error: `Failed to save feedback. Error: ${error.message}` }); // Return error message to client
+        console.error("Error saving feedback:", error); // Log the error for debugging
+        res.status(500).json({ error: `Failed to save feedback. Error: ${error.message}` });
     }
 };
 
-const updateFeedback = async (req, res) => {
-    try {
-        const { id } = req.params;
-        const updates = req.body;
-        const updatedFeedback = await UserFeedback.findByIdAndUpdate(id, updates, { new: true });
-
-        if (!updatedFeedback) return res.status(404).json({ error: "Feedback not found" });
-        res.status(200).json(updatedFeedback);
-    } catch (error) {
-        console.error("Error updating feedback:", error);
-        res.status(500).json({ error: "Failed to update feedback" });
-    }
-};
-
-module.exports = { submitFeedback, updateFeedback };
+module.exports = { submitFeedback };

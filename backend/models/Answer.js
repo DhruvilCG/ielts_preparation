@@ -1,6 +1,7 @@
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
+import mongoose , {Schema} from "mongoose" ;
 
-const answerSchema = new mongoose.Schema({
+const answerSchema = new Schema({
   userId: { type: String, required: true },
   module: { type: String, required: true },
   questionId: { type: String, required: true },
