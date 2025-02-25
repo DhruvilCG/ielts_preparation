@@ -1,14 +1,17 @@
 import { ArrowLeft, Book, Clock, Trophy, CheckCircle2 } from "lucide-react";
 import "./practice.css";
+import {Link} from "react-router-dom" ;
 
 const ListeningPractice = () => {
   return (
     <div className="container">
       <div className="content">
-        <button className="back-button">
-          <ArrowLeft className="h-4 w-4" />
-          Back to Practice Modules
-        </button>
+      <Link to="/practice">
+          <button className="back-button" >
+            <ArrowLeft className="h-4 w-4" />
+            Back to Practice Modules
+          </button>
+        </Link>
 
         <div className="header">
           <h1>IELTS Listening Practice</h1>

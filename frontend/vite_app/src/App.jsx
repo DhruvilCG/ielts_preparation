@@ -19,7 +19,7 @@ function App() {
         <Route path="/practice/reading-practice" element= {<ReadingPracticeTest />} />
         <Route path="/practice/writing-practice" element={<WritingPracticeTest />} /> 
         <Route path="/practice/reading-practice/test" element={<ReadingTest />} />
-        <Route path="practice/writing-practice/test" element={<WritingTest />} />
+        <Route path="/practice/writing-practice/test" element={<WritingTest />} />
         <Route path="/feedback" element={<FeedbackForm />} />
       </Routes>
     </Router>

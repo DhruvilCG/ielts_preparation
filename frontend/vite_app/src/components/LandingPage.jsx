@@ -1,5 +1,5 @@
 import "./styles.css"
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 
 // Icons Component
 const Icon = ({ name }) => {
@@ -85,7 +85,8 @@ const App = () => {
           </Link>
         </div>
         <nav className="nav">
-          <a href="#">Practice Tests</a>
+          <Link to="/practice">Practice Tests</Link>
+
           <a href="#">Resources</a>
           <a href="#">Community</a>
         </nav>

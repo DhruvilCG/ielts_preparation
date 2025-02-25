@@ -6,7 +6,7 @@ const ReadingPractice = () => {
   return (
     <div className="container">
       <div className="content">
-        <Link to="/practice">
+        <Link to="/practice" style={{ textDecoration: "none", color: "inherit" }}>
           <button className="back-button" >
             <ArrowLeft className="h-4 w-4" />
             Back to Practice Modules

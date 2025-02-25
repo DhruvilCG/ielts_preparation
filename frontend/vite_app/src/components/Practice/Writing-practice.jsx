@@ -1,14 +1,17 @@
 import { ArrowLeft, Book, Clock, Trophy, CheckCircle2 } from "lucide-react";
 import "./practice.css";
+import {Link} from "react-router-dom" ;
 
 const WritingPractice = () => {
     return (
         <div className="container">
             <div className="content">
-                <button className="back-button">
-                    <ArrowLeft className="h-4 w-4" />
-                    Back to Practice Modules
-                </button>
+                <Link to="/practice" style={{ textDecoration: "none", color: "inherit" }}>
+                    <button className="back-button" >
+                        <ArrowLeft className="h-4 w-4" />
+                        Back to Practice Modules
+                    </button>
+                </Link>
 
                 <div className="header">
                     <h1>IELTS Writing Practice</h1>
