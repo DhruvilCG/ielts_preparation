@@ -1,7 +1,7 @@
 import { ArrowLeft, Book, Clock, Trophy, CheckCircle2 } from "lucide-react";
 import "./practice.css";
 
-const ReadingPractice = () => {
+const WritingPractice = () => {
     return (
         <div className="container">
             <div className="content">
@@ -164,4 +164,4 @@ const ReadingPractice = () => {
     );
 };
 
-export default ReadingPractice;
+export default WritingPractice;
