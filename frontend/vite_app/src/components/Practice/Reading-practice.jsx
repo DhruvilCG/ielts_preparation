@@ -1,14 +1,17 @@
 import { ArrowLeft, Book, Clock, Trophy, CheckCircle2 } from "lucide-react";
-import "./reading-test.css";
+import "./practice.css";
+import {Link} from "react-router-dom" ;
 
-const Index = () => {
+const ReadingPractice = () => {
   return (
     <div className="container">
       <div className="content">
-        <button className="back-button">
-          <ArrowLeft className="h-4 w-4" />
-          Back to Practice Modules
-        </button>
+        <Link to="/practice" style={{ textDecoration: "none", color: "inherit" }}>
+          <button className="back-button" >
+            <ArrowLeft className="h-4 w-4" />
+            Back to Practice Modules
+          </button>
+        </Link>
 
         <div className="header">
           <h1>IELTS Reading Practice</h1>
@@ -164,4 +167,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default ReadingPractice;

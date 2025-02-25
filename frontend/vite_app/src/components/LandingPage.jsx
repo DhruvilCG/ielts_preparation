@@ -1,4 +1,5 @@
 import "./styles.css"
+import { Link } from "react-router-dom"
 
 // Icons Component
 const Icon = ({ name }) => {
@@ -78,9 +79,14 @@ const App = () => {
     <div className="app">
       {/* Header */}
       <header className="header">
-        <div className="logo">IELTS Master</div>
+        <div className="logo">
+          <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+            IELTS Master
+          </Link>
+        </div>
         <nav className="nav">
-          <a href="#">Practice Tests</a>
+          <Link to="/practice">Practice Tests</Link>
+
           <a href="#">Resources</a>
           <a href="#">Community</a>
         </nav>
