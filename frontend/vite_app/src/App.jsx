@@ -3,6 +3,7 @@ import FeedbackForm from "./components/FeedbackForm.jsx";
 import LandingPage from "./components/LandingPage.jsx" ;
 import IELTSMaster from "./components/Practice.jsx" ;
 import IELTSReadingPractice from "./components/Reading-test.jsx" ;
+import ReadingTest from "./components/ReadingTest.jsx" ;
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <FeedbackForm /> */}
       {/* <LandingPage /> */}
       {/* <IELTSMaster /> */}
-      <IELTSReadingPractice />
+      {/* <IELTSReadingPractice /> */}
+      <ReadingTest />
     </div>
   );
 }

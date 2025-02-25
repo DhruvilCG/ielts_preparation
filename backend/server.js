@@ -1,10 +1,12 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors') ;
 const feedbackRoutes = require('./routes/feedbackRoutes');
 const ieltsRoutes = require('./routes/ieltsRoutes'); // Ensure the correct import
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 
 // MongoDB connection
