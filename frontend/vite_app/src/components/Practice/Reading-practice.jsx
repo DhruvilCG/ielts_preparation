@@ -1,7 +1,7 @@
 import { ArrowLeft, Book, Clock, Trophy, CheckCircle2 } from "lucide-react";
-import "./reading-test.css";
+import "./reading-practice.css";
 
-const Index = () => {
+const ReadingPractice = () => {
   return (
     <div className="container">
       <div className="content">
@@ -164,4 +164,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default ReadingPractice;
