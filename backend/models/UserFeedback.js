@@ -1,12 +1,15 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
+// Define the UserFeedback schema
 const UserFeedbackSchema = new mongoose.Schema({
     name: { type: String, required: true },
     email: { type: String, required: true },
     message: { type: String, required: true },
-    rating: { type: Number, min: 1, max: 5, required: true },
-    feedbackType: { type: String, enum: ['positive', 'negative', 'suggestion'], required: true },
-    createdAt: { type: Date, default: Date.now }
-}, { collection: "userfeedbacks" });
+    rating: { type: Number, required: true },
+    feedbackType: { type: String, required: true }
+}, { timestamps: true });
 
-module.exports = mongoose.model("UserFeedback", UserFeedbackSchema);
+// Creating the UserFeedback model based on the schema
+const UserFeedback = mongoose.model('UserFeedback', UserFeedbackSchema);
+
+module.exports = UserFeedback;

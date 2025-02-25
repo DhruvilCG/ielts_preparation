@@ -1,0 +1,342 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  .app {
+    min-height: 100vh;
+    width: 98.724vw;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: #666;
+  }
+  
+  .nav a:hover {
+    color: #6366f1;
+  }
+  
+  /* Buttons */
+  .primary-btn,
+  .sign-in-btn {
+    background: #6366f1;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .secondary-btn {
+    background: white;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: #f8f9fe;
+    padding: 4rem 2rem;
+  }
+  
+  .hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .hero-note {
+    margin-top: 1rem;
+    color: #666;
+    font-size: 0.875rem;
+  }
+  
+  .hero-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .stat-box {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stat-main {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #6366f1;
+  }
+  
+  .stat-desc {
+    color: #666;
+    font-size: 0.875rem;
+  }
+  
+  /* Stats Section */
+  .stats-section {
+    padding: 4rem 2rem;
+    background: white;
+    text-align: center;
+  }
+  
+  .stats-grid {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+  }
+  
+  .stat-card {
+    text-align: center;
+  }
+  
+  .stat-icon {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 auto 1rem;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: #6366f1;
+  }
+  
+  /* Study Paths */
+  .study-paths {
+    padding: 4rem 2rem;
+    background: #f8f9fe;
+    text-align: center;
+  }
+  
+  .paths-grid {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .study-path-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .study-path-card.purple {
+    background: #6366f1;
+    color: white;
+  }
+  
+  .study-path-card h3 {
+    margin-bottom: 1rem;
+  }
+  
+  .study-path-card ul {
+    list-style: none;
+    margin-top: 1.5rem;
+  }
+  
+  .study-path-card li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .check-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .purple .check-icon {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Features */
+  .features {
+    padding: 4rem 2rem;
+    background: white;
+  }
+  
+  .features-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+  }
+  
+  .features-label {
+    color: #6366f1;
+    font-weight: 500;
+    font-size: 0.875rem;
+  }
+  
+  .features-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .feature-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-icon {
+    width: 3rem;
+    height: 3rem;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .learn-more {
+    color: #6366f1;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  
+  /* CTA Section */
+  .cta {
+    background: #6366f1;
+    color: white;
+    padding: 4rem 2rem;
+  }
+  
+  .cta-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Footer */
+  .footer {
+    background: white;
+    padding: 4rem 2rem 2rem;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+  
+  .footer-section h3 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  
+  .footer-section a {
+    display: block;
+    color: #666;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+    color: #666;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav {
+      display: none;
+    }
+  
+    .hero-content {
+      grid-template-columns: 1fr;
+    }
+  
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .cta-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+    }
+  }
+  
+  
