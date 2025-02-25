@@ -1,0 +1,254 @@
+.container {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f5;
+    width: 98.72vw;
+    max-width: 100%;
+  }
+  
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    justify-content: space-between;
+    align-self: stretch;
+    padding: 1.5rem 4rem;
+    width: 100%;
+    font-size: 1rem;
+    color: black;
+    background-color: white;
+    box-shadow: 0px 1px 19px rgba(0, 0, 0, 0.25);
+  }
+  
+  .headerTitle {
+    align-self: flex-start;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .headerNav {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+    margin: auto 0;
+  }
+  
+  .headerNavItem {
+    display: flex;
+    gap: 0.375rem;
+    align-self: stretch;
+    white-space: nowrap;
+  }
+  
+  .headerNavIcon {
+    object-fit: contain;
+    flex-shrink: 0;
+    aspect-ratio: 1.08;
+    width: 26px;
+  }
+  
+  .signInButton {
+    padding: 0.5rem 1.25rem;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .main {
+    margin-top: 4rem;
+    text-align: center;
+  }
+  
+  .mainTitle {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: black;
+  }
+  
+  .mainDescription {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    color: black;
+  }
+  
+  .practiceSections {
+    display: flex;
+    gap: 1.25rem;
+    margin-top: 4rem;
+    width: 100%;
+    max-width: 1246px;
+  }
+  
+  .practiceSection {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: flex-start;
+    padding: 1.25rem;
+    padding-top: 6rem;
+    padding-bottom: 1.75rem;
+    width: 100%;
+    font-size: 1.25rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
+  }
+  
+  .practiceSectionIcon {
+    object-fit: contain;
+    margin-left: 1.25rem;
+    width: 1.25rem;
+    aspect-ratio: 0.71;
+  }
+  
+  .practiceSectionTitle {
+    font-weight: 600;
+    color: black;
+  }
+  
+  .practiceSectionDescription {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: black;
+    width: 252px;
+  }
+  
+  .startPracticeButton {
+    margin-top: 1.75rem;
+    margin-left: 0.625rem;
+    padding: 1rem 3.5rem;
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    padding: 2.75rem;
+    padding-top: 5rem;
+    margin-top: 5rem;
+    width: 100%;
+    background-color: white;
+  }
+  
+  .footerContent {
+    display: flex;
+    gap: 1.25rem;
+    max-width: 842px;
+  }
+  
+  .footerMainSection {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 0.625rem;
+    color: black;
+  }
+  
+  .footerTitle {
+    align-self: flex-start;
+    margin-left: 3.5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .footerDescription {
+    margin-top: 2.75rem;
+    font-size: 1rem;
+  }
+  
+  .footerLinksSection {
+    display: flex;
+    gap: 1.25rem;
+  }
+  
+  .footerLinkTitle {
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+  }
+  
+  .footerLink {
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: black;
+  }
+  
+  .footerDivider {
+    margin-top: 4rem;
+    height: 1px;
+    background-color: black;
+  }
+  
+  .footerCopyright {
+    display: flex;
+    gap: 0.625rem;
+    align-self: center;
+    margin-top: 2rem;
+    max-width: 100%;
+    color: black;
+    width: 327px;
+  }
+  
+  .copyrightIcon {
+    padding: 0.375rem;
+    font-size: 1rem;
+    font-weight: 300;
+    white-space: nowrap;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 9999px;
+    height: 22px;
+    width: 22px;
+    text-align: center;
+    line-height: 1;
+  }
+  
+  .copyrightText {
+    flex: 1;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 292px;
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      padding: 1.25rem;
+    }
+  
+    .practiceSections {
+      flex-direction: column;
+    }
+  
+    .practiceSection {
+      margin-top: 2rem;
+    }
+  
+    .footerContent {
+      flex-direction: column;
+    }
+  
+    .footerTitle {
+      margin-left: 0.625rem;
+    }
+  
+    .footerDescription {
+      margin-top: 2.5rem;
+    }
+  
+    .footerLinksSection {
+      margin-top: 2.5rem;
+    }
+  }
