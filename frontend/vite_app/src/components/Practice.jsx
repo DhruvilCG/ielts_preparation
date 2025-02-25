@@ -1,31 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./practice.css";
+import { Link } from "react-router-dom";
 
 const Header = ({ title }) => (
   <header className="header">
-    <div className="headerTitle">{title}</div>
-    <nav className="headerNav">
-      <div>Practice Tests</div>
-      <div className="headerNavItem">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/87aa91620a9b427788914d3789c308bf/7b8e4d378efb0b70ff2772658d14202d586f97c3ee6c442971e7555cb4df18a2?apiKey=87aa91620a9b427788914d3789c308bf&"
-          alt=""
-          className="headerNavIcon"
-        />
-        <div>Resources</div>
-      </div>
-      <div className="headerNavItem">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/87aa91620a9b427788914d3789c308bf/2fbd5d16cf2a0141f3888351e6aa1bbdb4b2ad8e1fc1ed698a561bb6e20a2dce?apiKey=87aa91620a9b427788914d3789c308bf&"
-          alt=""
-          className="headerNavIcon"
-        />
-        <div>Community</div>
-      </div>
-    </nav>
-    <button className="signInButton">Sign In</button>
-  </header>
+        <div className="logo">
+          <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+            IELTS Master
+          </Link>
+        </div>
+        <nav className="nav">
+          <a href="#">Practice Tests</a>
+          <a href="#">Resources</a>
+          <a href="#">Community</a>
+        </nav>
+        <button className="sign-in-btn">Sign In</button>
+      </header>
 );
 
 const PracticeSection = ({ title, description, iconSrc }) => (
