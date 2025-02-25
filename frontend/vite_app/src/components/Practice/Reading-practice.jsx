@@ -1,5 +1,5 @@
 import { ArrowLeft, Book, Clock, Trophy, CheckCircle2 } from "lucide-react";
-import "./reading-practice.css";
+import "./practice.css";
 
 const ReadingPractice = () => {
   return (
