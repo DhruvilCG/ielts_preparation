@@ -2,29 +2,33 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors') ;
 const feedbackRoutes = require('./routes/feedbackRoutes');
-const ieltsRoutes = require('./routes/ieltsRoutes'); // Ensure the correct import
+const ieltsRoutes = require('./routes/ieltsRoutes');
+const authRoutes = require('./routes/authRoutes');
+
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-// MongoDB connection
+
 mongoose.connect("mongodb+srv://dhruvilpatelm:dhruvil2207@cluster0.4xcyi.mongodb.net/IELTS?retryWrites=true&w=majority&appName=Cluster0", {})
   .then(() => console.log("✅ MongoDB Connected"))
   .catch((err) => console.log("❌ Error:", err));
 
-// Feedback route
+  
 app.use('/api/feedback', feedbackRoutes);
-// IELTS route
-app.use('/api/ielts', ieltsRoutes);  // This ensures the /api/ielts path works properly
 
-// Default route for testing
+app.use('/api/ielts', ieltsRoutes);
+
+app.use('/api/auth', authRoutes);
+
+
+
 app.get('/', (req, res) => {
     res.send('Welcome to the API!');
 });
 
-// Server running on port
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
