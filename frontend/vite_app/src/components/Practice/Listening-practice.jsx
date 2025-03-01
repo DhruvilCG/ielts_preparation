@@ -1,12 +1,12 @@
 import { ArrowLeft, Book, Clock, Trophy, CheckCircle2 } from "lucide-react";
 import "./practice.css";
-import {Link} from "react-router-dom" ;
+import { Link } from "react-router-dom";
 
 const ListeningPractice = () => {
   return (
     <div className="container">
       <div className="content">
-      <Link to="/practice">
+        <Link to="/practice">
           <button className="back-button" >
             <ArrowLeft className="h-4 w-4" />
             Back to Practice Modules
