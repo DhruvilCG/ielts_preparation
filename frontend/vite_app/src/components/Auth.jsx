@@ -12,11 +12,10 @@ function AuthPage() {
     <div className="auth-container">
       <div className="auth-card">
         <div className="auth-header">
-          <img
-            src="/placeholder.svg?height=60&width=180"
-            alt="IELTS Logo"
-            className="auth-logo"
-          />
+          <div className="logo">
+                  <div className="ielts">IELTS</div>
+                  <div className="master">Master</div>
+              </div>
           <h1 className="auth-title">Welcome to IELTS Preparation</h1>
           <p className="auth-subtitle">
             Your journey to IELTS success starts here

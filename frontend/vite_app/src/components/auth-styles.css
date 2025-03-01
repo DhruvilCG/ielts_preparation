@@ -34,6 +34,7 @@
   }
   
   .auth-container {
+    width: 100vw;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -61,7 +62,7 @@
   }
   
   .auth-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--gray-900);
     margin-bottom: 0.5rem;
@@ -317,4 +318,14 @@
     }
   }
   
-  
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .ielts {
+    color: #1565c0;
+  }
