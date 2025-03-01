@@ -1,6 +1,6 @@
 import { ArrowLeft, Book, Clock, Trophy, CheckCircle2 } from "lucide-react";
 import "./practice.css";
-import {Link} from "react-router-dom" ;
+import { Link } from "react-router-dom";
 
 const WritingPractice = () => {
     return (
@@ -50,64 +50,93 @@ const WritingPractice = () => {
                     </div>
                 </div>
 
-                <div className="practice-grid">
-                    {[
-                        {
-                            title: "Academic Writing Test 1",
-                            difficulty: "Medium",
-                            time: "20 minutes",
-                            questions: "Expert evaluation included",
-                            topics: ["Data Interpretation", "Process Description", "Chart Analysis"],
-                        },
-                        {
-                            title: "Academic Writing Test 2",
-                            difficulty: "Hard",
-                            time: "20 minutes",
-                            questions: "Expert evaluation included",
-                            topics: ["Environment", "Education", "Technology"],
-                        },
-                        {
-                            title: "Academic Writing Test 3",
-                            difficulty: "Advanced",
-                            time: "20 minutes",
-                            questions: "Expert evaluation included",
-                            topics: ["Formal Letters", "Semi-formal Letters", "Informal Letters"],
-                        },
-                    ].map((test) => (
-                        <div key={test.title} className="card test-card">
-                            <div className="test-header">
-                                <div className="test-title">
-                                    <Book className="h-5 w-5" />
-                                    <h3>{test.title}</h3>
-                                </div>
-                                <span className="badge">{test.difficulty}</span>
+                <div className="writing-practice-container" style={{ display: "flex" , gap: "20px" , paddingBottom: "50px" }}>
+                    {/* Academic Writing Test 1 */}
+                    <div className="card test-card">
+                        <div className="test-header">
+                            <div className="test-title">
+                                <Book className="h-5 w-5" />
+                                <h3>Academic Writing Test 1</h3>
                             </div>
-
-                            <div className="test-info">
-                                <div>
-                                    <Clock className="h-4 w-4" />
-                                    {test.time}
-                                </div>
-                                <div>
-                                    <CheckCircle2 className="h-4 w-4" />
-                                    {test.questions}
-                                </div>
-                            </div>
-
-                            <div className="topics">
-                                {test.topics.map((topic) => (
-                                    <span key={topic} className="topic-badge">
-                                        {topic}
-                                    </span>
-                                ))}
-                            </div>
-
-                            <button className="start-button">
-                                Start Writing
-                            </button>
+                            <span className="badge">Medium</span>
                         </div>
-                    ))}
+                        <div className="test-info">
+                            <div>
+                                <Clock className="h-4 w-4" />
+                                20 minutes
+                            </div>
+                            <div>
+                                <CheckCircle2 className="h-4 w-4" />
+                                Expert evaluation included
+                            </div>
+                        </div>
+                        <div className="topics">
+                            <span className="topic-badge">Data Interpretation</span>
+                            <span className="topic-badge">Process Description</span>
+                            <span className="topic-badge">Chart Analysis</span>
+                        </div>
+
+                        <Link to="/practice/writing-practice/test">
+                        <button className="start-button">Start Writing</button>
+                        </Link>
+                        
+                    </div>
+
+                    {/* Academic Writing Test 2 */}
+                    <div className="card test-card">
+                        <div className="test-header">
+                            <div className="test-title">
+                                <Book className="h-5 w-5" />
+                                <h3>Academic Writing Test 2</h3>
+                            </div>
+                            <span className="badge">Hard</span>
+                        </div>
+                        <div className="test-info">
+                            <div>
+                                <Clock className="h-4 w-4" />
+                                20 minutes
+                            </div>
+                            <div>
+                                <CheckCircle2 className="h-4 w-4" />
+                                Expert evaluation included
+                            </div>
+                        </div>
+                        <div className="topics">
+                            <span className="topic-badge">Environment</span>
+                            <span className="topic-badge">Education</span>
+                            <span className="topic-badge">Technology</span>
+                        </div>
+                        <button className="start-button">Start Writing</button>
+                    </div>
+
+                    {/* Academic Writing Test 3 */}
+                    <div className="card test-card">
+                        <div className="test-header">
+                            <div className="test-title">
+                                <Book className="h-5 w-5" />
+                                <h3>Academic Writing Test 3</h3>
+                            </div>
+                            <span className="badge">Advanced</span>
+                        </div>
+                        <div className="test-info">
+                            <div>
+                                <Clock className="h-4 w-4" />
+                                20 minutes
+                            </div>
+                            <div>
+                                <CheckCircle2 className="h-4 w-4" />
+                                Expert evaluation included
+                            </div>
+                        </div>
+                        <div className="topics">
+                            <span className="topic-badge">Formal Letters</span>
+                            <span className="topic-badge">Semi-formal Letters</span>
+                            <span className="topic-badge">Informal Letters</span>
+                        </div>
+                        <button className="start-button">Start Writing</button>
+                    </div>
                 </div>
+
 
                 <div className="materials-section">
                     <h2>Premium Study Materials</h2>

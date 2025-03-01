@@ -105,7 +105,9 @@ const IELTSMaster = () => {
             <div className="practiceSectionDescription">
               Practice listening with real IELTS-style audio recordings.
             </div>
+            <Link to="/practice/listening-practice">
             <button className="startPracticeButton">Start Listening Practice</button>
+            </Link>
           </div>
 
           {/* Speaking Section */}

@@ -50,64 +50,100 @@ const ReadingPractice = () => {
           </div>
         </div>
 
-        <div className="practice-grid">
-          {[
-            {
-              title: "Academic Reading Test 1",
-              difficulty: "Medium",
-              time: "60 minutes",
-              questions: "40 questions",
-              topics: ["Science", "History", "Environment"],
-            },
-            {
-              title: "Academic Reading Test 2",
-              difficulty: "Hard",
-              time: "60 minutes",
-              questions: "40 questions",
-              topics: ["Technology", "Society", "Education"],
-            },
-            {
-              title: "Academic Reading Test 3",
-              difficulty: "Advanced",
-              time: "60 minutes",
-              questions: "40 questions",
-              topics: ["Psychology", "Architecture", "Economics"],
-            },
-          ].map((test) => (
-            <div key={test.title} className="card test-card">
-              <div className="test-header">
-                <div className="test-title">
-                  <Book className="h-5 w-5" />
-                  <h3>{test.title}</h3>
-                </div>
-                <span className="badge">{test.difficulty}</span>
-              </div>
+<div className="practice-grid">
+  {/* Academic Reading Test 1 */}
+  <div className="card test-card">
+    <div className="test-header">
+      <div className="test-title">
+        <Book className="h-5 w-5" />
+        <h3>Academic Reading Test 1</h3>
+      </div>
+      <span className="badge">Medium</span>
+    </div>
 
-              <div className="test-info">
-                <div>
-                  <Clock className="h-4 w-4" />
-                  {test.time}
-                </div>
-                <div>
-                  <CheckCircle2 className="h-4 w-4" />
-                  {test.questions}
-                </div>
-              </div>
+    <div className="test-info">
+      <div>
+        <Clock className="h-4 w-4" />
+        60 minutes
+      </div>
+      <div>
+        <CheckCircle2 className="h-4 w-4" />
+        40 questions
+      </div>
+    </div>
 
-              <div className="topics">
-                {test.topics.map((topic) => (
-                  <span key={topic} className="topic-badge">
-                    {topic}
-                  </span>
-                ))}
-              </div>
+    <div className="topics">
+      <span className="topic-badge">Science</span>
+      <span className="topic-badge">History</span>
+      <span className="topic-badge">Environment</span>
+    </div>
 
-              <button className="start-button">
-                Start Practice
-              </button>
-            </div>
-          ))}
-        </div>
+    <Link to="/practice/reading-practice/test" className="start-button">
+      Start Practice
+    </Link>
+  </div>
+
+  {/* Academic Reading Test 2 */}
+  <div className="card test-card">
+    <div className="test-header">
+      <div className="test-title">
+        <Book className="h-5 w-5" />
+        <h3>Academic Reading Test 2</h3>
+      </div>
+      <span className="badge">Hard</span>
+    </div>
+
+    <div className="test-info">
+      <div>
+        <Clock className="h-4 w-4" />
+        60 minutes
+      </div>
+      <div>
+        <CheckCircle2 className="h-4 w-4" />
+        40 questions
+      </div>
+    </div>
+
+    <div className="topics">
+      <span className="topic-badge">Technology</span>
+      <span className="topic-badge">Society</span>
+      <span className="topic-badge">Education</span>
+    </div>
+
+    <button className="start-button">Start Practice</button>
+  </div>
+
+  {/* Academic Reading Test 3 */}
+  <div className="card test-card">
+    <div className="test-header">
+      <div className="test-title">
+        <Book className="h-5 w-5" />
+        <h3>Academic Reading Test 3</h3>
+      </div>
+      <span className="badge">Advanced</span>
+    </div>
+
+    <div className="test-info">
+      <div>
+        <Clock className="h-4 w-4" />
+        60 minutes
+      </div>
+      <div>
+        <CheckCircle2 className="h-4 w-4" />
+        40 questions
+      </div>
+    </div>
+
+    <div className="topics">
+      <span className="topic-badge">Psychology</span>
+      <span className="topic-badge">Architecture</span>
+      <span className="topic-badge">Economics</span>
+    </div>
+
+    <button className="start-button">Start Practice</button>
+  </div>
+</div>;
+
 
         <div className="materials-section">
           <h2>Premium Study Materials</h2>
