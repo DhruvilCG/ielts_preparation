@@ -10,6 +10,7 @@ import ReadingPracticeTest from "./components/Practice/Reading-practice.jsx";
 import WritingPracticeTest from "./components/Practice/Writing-practice.jsx";
 import ListeningPracticeTest from "./components/Practice/Listening-practice.jsx";
 import AuthPage from "./components/Auth.jsx";
+import Community from "./components/community/Community.jsx";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/practice/listening-practice" element={<ListeningPracticeTest />} />
         <Route path="/practice/reading-practice/test" element={<ReadingTest />} />
         <Route path="/practice/writing-practice/test" element={<WritingTest />} />
+        <Route path="/community" element={<Community />} />
         <Route path="/feedback" element={<FeedbackForm />} />
       </Routes>
     </Router>
