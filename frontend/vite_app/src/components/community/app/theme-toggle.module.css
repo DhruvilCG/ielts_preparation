@@ -1,0 +1,44 @@
+.themeButton {
+    position: relative;
+  }
+  
+  .sunIcon {
+    height: 1.2rem;
+    width: 1.2rem;
+    rotate: 0deg;
+    scale: 100%;
+    transition: all 0.2s ease;
+  }
+  
+  .moonIcon {
+    position: absolute;
+    height: 1.2rem;
+    width: 1.2rem;
+    rotate: 90deg;
+    scale: 0;
+    transition: all 0.2s ease;
+  }
+  
+  .dark .sunIcon {
+    rotate: -90deg;
+    scale: 0;
+  }
+  
+  .dark .moonIcon {
+    rotate: 0deg;
+    scale: 100%;
+  }
+  
+  .srOnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  
+  

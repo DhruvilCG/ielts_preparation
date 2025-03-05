@@ -1,0 +1,123 @@
+.container {
+    min-height: 100vh;
+    background-color: var(--background);
+    position: relative;
+  }
+  
+  .header {
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .headerContent {
+    display: flex;
+    height: 4rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .headerActions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .signInButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius);
+    font-size: 0.875rem;
+    font-weight: 500;
+    height: 2.5rem;
+    padding: 0 1rem;
+    background-color: var(--background);
+    color: var(--foreground);
+    border: 1px solid var(--input);
+    cursor: pointer;
+  }
+  
+  .signInButton:hover {
+    background-color: var(--accent);
+    color: var(--accent-foreground);
+  }
+  
+  .joinButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius);
+    font-size: 0.875rem;
+    font-weight: 500;
+    height: 2.5rem;
+    padding: 0 1rem;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .joinButton:hover {
+    background-color: color-mix(in srgb, var(--primary) 90%, black);
+  }
+  
+  .main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+  }
+  
+  .tabs {
+    width: 100%;
+  }
+  
+  .tabsList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  
+  .chatButton {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+  
+  .floatingButton {
+    display: flex;
+    height: 3rem;
+    width: 3rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .floatingButton:hover {
+    background-color: color-mix(in srgb, var(--primary) 90%, black);
+  }
+  
+  .chatIcon {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  
+  
