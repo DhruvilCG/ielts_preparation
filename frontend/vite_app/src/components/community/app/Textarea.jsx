@@ -1,7 +1,7 @@
 import React from "react";
 import "./textarea.css";
 
-const Textarea = ({ placeholder, value, onChange, className = "" }) => {
+export const Textarea = ({ placeholder, value, onChange, className = "" }) => {
   return (
     <textarea
       className={`custom-textarea ${className}`}
@@ -11,5 +11,3 @@ const Textarea = ({ placeholder, value, onChange, className = "" }) => {
     ></textarea>
   );
 };
-
-export default Textarea;
