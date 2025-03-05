@@ -1,0 +1,199 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .tabs {
+    width: 100%;
+  }
+  
+  .tabsList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 1.5rem;
+  }
+  
+  .tabContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .chatContainer {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chatHeader {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+    background-color: color-mix(in srgb, var(--muted) 50%, transparent);
+  }
+  
+  .chatHeaderContent {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .botIcon {
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+  
+  .chatTitle {
+    font-weight: 500;
+  }
+  
+  .chatMessages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .messageContainer {
+    display: flex;
+  }
+  
+  .userMessage {
+    justify-content: flex-end;
+  }
+  
+  .botMessage {
+    justify-content: flex-start;
+  }
+  
+  .message {
+    max-width: 80%;
+    border-radius: var(--radius);
+    padding: 0.75rem;
+  }
+  
+  .userMessageBubble {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+  }
+  
+  .botMessageBubble {
+    background-color: var(--muted);
+  }
+  
+  .chatInputContainer {
+    padding: 1rem;
+    border-top: 1px solid var(--border);
+  }
+  
+  .chatInputWrapper {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .chatInput {
+    flex: 1;
+  }
+  
+  .sendButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: var(--radius);
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .sendIcon {
+    height: 1rem;
+    width: 1rem;
+  }
+  
+  .askExpertCard {
+    margin-bottom: 1.5rem;
+  }
+  
+  .cardTitle {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .cardDescription {
+    color: var(--muted-foreground);
+  }
+  
+  .questionForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .questionInput {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--input);
+    background-color: var(--background);
+  }
+  
+  .formHint {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+  }
+  
+  .submitQuestionButton {
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .previousQuestionsSection {
+    margin-top: 1.5rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  
+  .questionsList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .questionCard {
+    margin-bottom: 1rem;
+  }
+  
+  .questionTitle {
+    font-size: 1rem;
+  }
+  
+  .expertInfo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .expertAvatar {
+    height: 1.25rem;
+    width: 1.25rem;
+    border-radius: 9999px;
+    overflow: hidden;
+  }
+  
+  .answerText {
+    font-size: 0.875rem;
+  }
+  
+  
