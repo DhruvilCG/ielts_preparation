@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import { Toaster } from "./components/ui/toaster";
-import { Toaster as Sonner } from "./components/ui/sonner";
-import { TooltipProvider } from "./components/ui/tooltip";
+import { Toaster } from "./UI/toaster.jsx";
+import { Toaster as Sonner } from "./UI/toaster.jsx";
+import { TooltipProvider } from "./UI/tooltip.jsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "./community.css";
 
-// Navbar Component
+// Navbar Component 
 const Navbar = () => {
   return (
     <nav className="navbar">
