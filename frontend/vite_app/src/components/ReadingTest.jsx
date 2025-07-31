@@ -11,7 +11,7 @@ const ReadingTest = () => {
   const [passages, setPassages] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/ielts/reading")
+    fetch("https://ielts-preparation-2.onrender.com/api/ielts/reading")
       .then((response) => {
         if (!response.ok) throw new Error("Failed to fetch questions");
         return response.json();

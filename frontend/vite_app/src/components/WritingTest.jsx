@@ -8,7 +8,7 @@ const WritingTest = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/ielts/writing")
+    fetch("https://ielts-preparation-2.onrender.com/api/ielts/writing")
       .then((response) => response.json())
       .then((data) => setWritingData(data))
       .catch((error) => console.error("Error fetching writing test data:", error));
